@@ -21,7 +21,29 @@
     </nav>
     <section id="main-content">
 
-       <!-- Use the request attribute "recipes" (List<Recipe>) -->
+<c:set var="counter" value="0" />
+<c:forEach var="recipe" items="${recipes}">
+<div class="tile ">
+				<a class="product-image" href="#"> 
+					<img src="<c:url value="/img/recipe${counter}.jpg" />" />
+					<c:set var="counter" value="${counter+1}" />
+				</a>
+				<div class="details">
+					<p class="name">${recipe.name}</p>
+
+					<p class="ingredients">${recipe.ingredients.size()} ingredients</p>
+
+					<div class="rating">
+					
+					<c:forEach begin="1" end="${recipe.averageRating}" var="recipe" >
+						<span class=".filled">&#9734;</span>
+					
+					</c:forEach>
+						 
+					</div>	
+				</div>
+			</div>
+</c:forEach>
 
     </section>
 </body>

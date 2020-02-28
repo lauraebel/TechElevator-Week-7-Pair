@@ -56,3 +56,9 @@ section {
 	background-color: #FFF;
 	border-radius: 7px;
 }
+
+.filled:before {
+    content: "\2605";
+    color: #FFC000;
+    position: absolute;
+}
