@@ -19,11 +19,11 @@
         </ul>
         
     </nav>
-    <section id="main-content">
+    <section id="main-content-table">
 
-<c:set var="counter" value="0" />
-<c:forEach var="recipe" items="${recipes}">
-<div class="table ">
+		<c:set var="counter" value="0" />
+		<c:forEach var="recipe" items="${recipes}">
+		<div class="table ">
 				<a class="product-image-table" href="#"> 
 					<img src="<c:url value="/img/recipe${counter}.jpg" />" />
 					<c:set var="counter" value="${counter+1}" />

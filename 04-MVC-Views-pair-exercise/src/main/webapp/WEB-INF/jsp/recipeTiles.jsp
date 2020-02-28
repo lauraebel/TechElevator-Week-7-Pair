@@ -20,10 +20,10 @@
         
     </nav>
     <section id="main-content">
-
-<c:set var="counter" value="0" />
-<c:forEach var="recipe" items="${recipes}">
-<div class="tile ">
+		<h2>Recipes</h2>
+		<c:set var="counter" value="0" />
+		<c:forEach var="recipe" items="${recipes}">
+		<div class="tile">
 				<a class="product-image" href="#"> 
 					<img src="<c:url value="/img/recipe${counter}.jpg" />" />
 					<c:set var="counter" value="${counter+1}" />
