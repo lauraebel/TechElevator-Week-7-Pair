@@ -75,87 +75,117 @@ section {
     position: absolute;
 }
 
+
+body #table {
+	width: 100%;
+	background-color: #212121;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+		sans-serif;
+	height: 20rem;
+}
+
+
 #main-content-table {
 	clear: both;
-	display: grid;
- 	grid-template-rows: 5fr 3fr 1fr 1fr 1fr 2fr;
-    grid-template-areas:
-    "image image image"
-    "name name name"
-    "type type type"
-    "time time time"
-    "ingredients ingredients ingredients"
-    "rating rating rating";
-    column-gap: 1rem;
-    row-gap: 1rem;
+	display: flex;
+	flex-wrap: wrap;
 	width: 80%;
 	margin: 20px auto;
 	margin-bottom: 0px;
 	padding-bottom: 0px;
 	vertical-align: top;
 	text-align: center;
-	min-height: 450px;
 	background-color: #FFF;
 	border-radius: 7px;
 	padding: 20px;
 }
 
-#main-content-table > div {
+#main-content-table > div.table {
 	display: inline;
 	justify-content: space-between;
+	width: 30%;
 	padding-top: 0px;
 	margin-top: 0px;
+	height: 17rem;
+}
+
+#main-content-table > div.titles {
+	grid-area: title;
+	width: 10%;
+	height: 8rem;
+	padding-top: 100px;
+	margin-top: 0px;
+}
+
+#main-content-table > div.titles > h6 {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+#main-content-table > div.titles > #name {
+	margin-top: 6px;
+	margin-bottom: 10px;
+}
+
+#main-content-table > div.titles > #rating {
+	margin-top: 5px;
+	margin-bottom: 0px;
 }
 
 #main-content-table > h2 {
 	text-align: center;
 	width: 100%;
 	margin: 0px;
-	padding: 0px; 
+	padding: 0px;
+	height: 1rem;
 }
 
-#main-content-table > div > h4.name-table {
-	grid-area: name;
+#main-content-table > div > .details-table {
+	grid-area: info;
+	display: block;
+	font-size: .8rem;
+}
+
+#main-content-table > div.table > div.details-table > p.name-table {
+	text-align: baseline;
+	margin-top: 1px;
+	margin-bottom: 0px;
+	height: 2rem;
+	background: lightgrey;
+}
+
+#main-content-table > div.table > div.details-table > p.type-table {
 	text-align: center;
-	width: 100%;
+	padding-top: 0px;
 	margin: 0px;
-	padding: 0px; 
 }
 
-#main-content-table > div > div.rating-table {
-	grid-area: rating;
+#main-content-table > div.table > div.details-table > p.cook-time-table {
 	text-align: center;
-	text-align: bottom;
 	padding-top: 0px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	margin-left: 5px;
-	height: 1rem;
+	background: lightgrey;
+	margin: 0px;
 }
 
-#main-content-table > div > p.type-table {
-	grid-area: type;
+#main-content-table > div.table > div.details-table > p.ingredients-table {
 	text-align: center;
 	padding-top: 0px;
+	margin: 0px;	
+}
+
+#main-content-table > div.table > div.details-table > div.rating-table {
+	text-align: center;
+	font-size: 1.2rem;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	margin-right: 5px;
-	height: 1rem;
-}
+	height: 1.5rem;
+	background: lightgrey;
 	
-	#main-content-table > div > p.cook-time-table {
-	grid-area: time;
-	text-align: center;
-	padding-top: 0px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	margin-right: 5px;
-	height: 1rem;
 }
 
 #main-content-table > div > p.ingredients-table {
 	grid-area: ingredients;
-	text-align: center;
+	text-align: right;
 	padding-top: 0px;
 	margin-top: 0px;
 	margin-bottom: 0px;
@@ -163,14 +193,19 @@ section {
 	height: 1rem;
 }
 
-#main-content-table > div > a {
+#main-content-table > div > a.product-image-table {
 	grid-area: image;
+	max-width: 100%;
+	height: auto;
+	
 }
 
 #main-content-table > div > a > img {
-	max-width: 40%;
+	max-width: 60%;
 	height:auto;
 }
+
+
 
 
 

@@ -8,7 +8,7 @@
     <title>Recipe Table View</title>
     <link rel="stylesheet" href="css/site.css" />
 </head>
-<body>
+<body id="table">
     <header>
         <h1>MVC Exercises - Views Part 2: Models</h1>        
     </header>
@@ -21,16 +21,24 @@
     </nav>
     <section id="main-content-table">
     	<h2>Recipes</h2>
+    	
+    	<div class="titles">
+	    	<h6 id="name">Name</h6>
+	    	<h6>Type</h6>
+	    	<h6>Cook Time</h6>
+	    	<h6>Ingredients</h6>
+	    	<h6 id="rating">Rating</h6>
+    	</div>
 
 		<c:set var="counter" value="0" />
 		<c:forEach var="recipe" items="${recipes}">
-		<div class="table ">
+		<div class="table">
 				<a class="product-image-table" href="#"> 
 					<img src="<c:url value="/img/recipe${counter}.jpg" />" />
 					<c:set var="counter" value="${counter+1}" />
 				</a>
 				<div class="details-table">
-					<h4 class="name-table">${recipe.name}</h4>
+					<p class="name-table">${recipe.name}</p>
 
 					<p class="type-table">${recipe.recipeType}</p>
 					
