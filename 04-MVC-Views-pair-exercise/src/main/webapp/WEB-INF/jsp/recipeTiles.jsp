@@ -29,16 +29,19 @@
 					<c:set var="counter" value="${counter+1}" />
 				</a>
 				<div class="details">
-					<p class="name">${recipe.name}</p>
+					<h4 class="name">${recipe.name}</h4>
 
 					<p class="ingredients">${recipe.ingredients.size()} ingredients</p>
 
 					<div class="rating">
 					
-					<c:forEach begin="1" end="${recipe.averageRating}" var="recipe" >
-						<span class=".filled">&#9734;</span>
-					
-					</c:forEach>
+						<c:set var="blankStars" value="${6 - recipe.averageRating}" />
+						<c:forEach begin="1" end="${6 - blankStars}" var="recipe" >
+							<span class="filled">&#9734;</span>					
+						</c:forEach>
+						<c:forEach begin="1" end="${blankStars}" var="recipe" >
+							<span class="empty">&#9734;</span>					
+						</c:forEach>
 						 
 					</div>	
 				</div>

@@ -20,6 +20,7 @@
         
     </nav>
     <section id="main-content-table">
+    	<h2>Recipes</h2>
 
 		<c:set var="counter" value="0" />
 		<c:forEach var="recipe" items="${recipes}">
@@ -29,7 +30,7 @@
 					<c:set var="counter" value="${counter+1}" />
 				</a>
 				<div class="details-table">
-					<p class="name-table">${recipe.name}</p>
+					<h4 class="name-table">${recipe.name}</h4>
 
 					<p class="type-table">${recipe.recipeType}</p>
 					
@@ -39,10 +40,13 @@
 					
 					<div class="rating-table">
 					
-					<c:forEach begin="1" end="${recipe.averageRating}" var="recipe" >
-						<span class=".filled">&#9734;</span>
-					
-					</c:forEach>
+					<c:set var="blankStars" value="${6 - recipe.averageRating}" />
+						<c:forEach begin="1" end="${6 - blankStars}" var="recipe" >
+							<span class="filled">&#9734;</span>					
+						</c:forEach>
+						<c:forEach begin="1" end="${blankStars}" var="recipe" >
+							<span class="empty-table">&#9734;</span>					
+						</c:forEach>
 						 
 					</div>	
 				</div>
