@@ -85,6 +85,147 @@ body #table {
 }
 
 
+
+/*-------------- DETAILS ---------------*/
+
+#main-content-details {
+	
+ 	margin: 20px auto;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	vertical-align: top;
+	text-align: left;
+	background-color: #FFF;
+	border-radius: 7px;
+	padding: 20px;
+}
+
+#main-content-details > #recipe-overview {
+	display: flex;
+	
+}
+
+#main-content-details > #recipe-overview > #recipe-details {
+	display: block;
+	width: 80%;
+}
+
+#main-content-details > #recipe-overview > #image {
+	
+	max-width: 35%;
+	height: auto;
+	left: 0px;
+	right: 0px;
+	margin-right: 1rem;
+}
+
+#main-content-details > #recipe-overview > #image > a.product-image {
+	
+	max-width: 100%;
+	height: auto;
+	left: 0px;
+	right: 0px;
+	
+}
+
+#main-content-details > #recipe-overview > #image > a > img {
+	width: 100%;
+	height: auto;
+	left: 0px;
+	right: 0px;
+	
+}
+
+#main-content-details > #recipe-overview > #recipe-details > h4.name {
+	
+	max-width: 100%;
+	text-align: left;
+	margin-top: 0px;
+	margin-bottom: .3rem;
+	height: 1rem;
+	padding-left: 0px;
+}
+
+#main-content-details > #recipe-overview > #recipe-details > p.type-details {
+	max-width: 100%;
+	text-align: left;
+	margin-top: 0px;
+	margin-bottom: .7rem;
+	height: 1rem;
+}
+
+#main-content-details > #recipe-overview > #recipe-details > #cook-time {
+	display: flex;
+	align-items: baseline;
+	max-width: 100%;
+	text-align: left;
+	margin-top: 0px;
+	margin-bottom: .7rem;
+	height: 1rem;
+}
+
+#main-content-details > #recipe-overview > #recipe-details > #cook-time > h5 {
+	
+	max-width: 2o%;
+	text-align: left;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	height: 1rem;
+}
+
+#main-content-details > #recipe-overview > #recipe-details > #cook-time > p.cook-time-details {
+	
+	max-width: 80%;
+	text-align: left;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: .5rem;
+	height: 1rem;
+}
+
+#main-content-details > #recipe-overview > #recipe-details > p.recipe-description {
+	
+	max-width: 100%;
+	text-align: left;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	height: 5rem;
+}
+
+#main-content-details > #ingredients > h5 {
+	display: block;
+	max-width: 100%;
+	text-align: left;
+}
+
+#main-content-details > #ingredients > li.ingredients {
+	display: list;
+	max-width: 100%;
+	text-align: left;
+	margin-left: 1rem;
+}
+
+#main-content-details > #preparation > h5 {
+	display: block;
+	max-width: 100%;
+	text-align: left;
+	border-top: solid black 1px;
+	padding-top: 20px;
+}
+
+#main-content-details > #preparation > li.preparation {
+	display: list;
+	list-style: decimal;
+	max-width: 100%;
+	padding-left: 0;
+	margin-left: 1rem;
+	list-style-position: outside;
+}
+
+
+/* ------------TABLE--------------*/
+
+
 #main-content-table {
 	clear: both;
 	display: flex;
@@ -111,10 +252,10 @@ body #table {
 
 #main-content-table > div.titles {
 	grid-area: title;
+	height: 7rem;
 	width: 10%;
-	height: 8rem;
-	padding-top: 100px;
-	margin-top: 0px;
+	padding-top: 6.5rem;
+	margin-top: 0;
 }
 
 #main-content-table > div.titles > h6 {
@@ -195,24 +336,19 @@ body #table {
 
 #main-content-table > div > a.product-image-table {
 	grid-area: image;
-	max-width: 100%;
-	height: auto;
+	width: auto;
+	height: 100%;
 	
 }
 
 #main-content-table > div > a > img {
-	max-width: 60%;
-	height:auto;
+	width: auto;
+	height:35%;
 }
 
 
 
-
-
-
-
-
-
+/*------------------TILE---------------------*/
 
 #main-content {
 	clear: both;

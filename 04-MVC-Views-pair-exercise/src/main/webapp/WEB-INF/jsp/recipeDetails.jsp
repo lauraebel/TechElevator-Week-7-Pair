@@ -11,36 +11,55 @@
 	<c:url var="imgUrl" value="/img/recipe${recipe.recipeId}" />
 	
 	    <section id="main-content-details">
-	    
-	    <a class="product-image" href="#"> 
-			<c:url var="imgUrl" value="/img/recipe${recipe.recipeId}.jpg" />
-			<img src="${imgUrl}"/>
-		</a>
-		
-		<h4 class="name">${recipe.name}</h4>
-		
-		<p class="type-details">${recipe.recipeType}</p>
-		
-		<h6>Cook Time</h6>
-		<p class="cook-time-details">${recipe.cookTimeInMinutes} minutes</p>
-		
-		<p class="recipe-description">${recipe.description}</p>
-		
-		<h3>Ingredients</h3>
-		
-		<c:forEach var="ingredient" items="${recipe.ingredients}">
-			<li class="ingredients">${ingredient.quantity}  ${ingredient.name}</li>
-		</c:forEach> 	
+	    	
+	    	<div id="recipe-overview">
+	    	
+	    		<div id="image">
+				    <a class="product-image" href="#"> 
+						<c:url var="imgUrl" value="/img/recipe${recipe.recipeId}.jpg" />
+						<img src="${imgUrl}"/>
+					</a>
+				</div>
+				
+				<div id=recipe-details>
+				
+					<h4 class="name">${recipe.name}</h4>
+					
+					<p class="type-details">${recipe.recipeType}</p>
 						
-	    <h3>Preparation</h3>
+					<div id="cook-time">
+						
+						<h5>Cook Time</h5>
+						<p class="cook-time-details">${recipe.cookTimeInMinutes} minutes</p>
+						
+					</div>
+						
+					<p class="recipe-description">${recipe.description}</p>
+				
+				</div>
+			
+			</div>
 		
-		<c:forEach var="prepStep" items="${recipe.preparationSteps}">
-			<li class="preparation">${prepStep}</li>
-		</c:forEach> 
-
-
-    </section>
-</body>
+			<div id="ingredients">
+			
+				<h5>Ingredients</h5>
+				
+				<c:forEach var="ingredient" items="${recipe.ingredients}">
+					<li class="ingredients">${ingredient.quantity}  ${ingredient.name}</li>
+				</c:forEach> 
+				
+			</div>	
+		
+			<div id="preparation">
+							
+			    <h5>Preparation</h5>
+				
+				<c:forEach var="prepStep" items="${recipe.preparationSteps}">
+					<li class="preparation">${prepStep}</li>
+				</c:forEach> 
+			</div>
+		</section>
+	</body>
 </html>
 
 	
