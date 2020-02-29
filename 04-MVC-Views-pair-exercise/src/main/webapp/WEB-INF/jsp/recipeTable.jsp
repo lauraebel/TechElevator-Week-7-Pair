@@ -1,24 +1,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!DOCTYPE html>
+<c:import url="/WEB-INF/jsp/header.jsp" />
+	
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Recipe Table View</title>
-    <link rel="stylesheet" href="css/site.css" />
-</head>
-<body id="table">
-    <header>
-        <h1>MVC Exercises - Views Part 2: Models</h1>        
-    </header>
-    <nav>
-        <ul>
-            <li><a href="recipeTiles">Tile Layout</a></li>
-            <li><a href="recipeTable">Table Layout</a></li>
-        </ul>
-        
-    </nav>
     <section id="main-content-table">
     	<h2>Recipes</h2>
     	
@@ -30,13 +14,14 @@
 	    	<h6 id="rating">Rating</h6>
     	</div>
 
-		<c:set var="counter" value="0" />
 		<c:forEach var="recipe" items="${recipes}">
 		<div class="table">
-				<a class="product-image-table" href="#"> 
-					<img src="<c:url value="/img/recipe${counter}.jpg" />" />
-					<c:set var="counter" value="${counter+1}" />
+		
+				<a class="product-image-table" href="<c:url value="/recipeDetails?recipeId=${recipe.recipeId}" /> ">
+					<c:url var="imgUrl" value="/img/recipe${recipe.recipeId}.jpg" />
+					<img src="${imgUrl}"/>
 				</a>
+	
 				<div class="details-table">
 					<p class="name-table">${recipe.name}</p>
 
@@ -59,7 +44,7 @@
 					</div>	
 				</div>
 			</div>
-</c:forEach>
+			</c:forEach>
     </section>
 </body>
 </html>
